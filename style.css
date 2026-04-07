@@ -1,10 +1,40 @@
 body{
   margin:0;
   font-family:sans-serif;
-  overflow:hidden;
 }
 
-/* VIDEO */
+/* 🔐 LOGIN PAGE */
+.login-bg{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background:linear-gradient(45deg, black, purple);
+}
+
+.glass{
+  background:rgba(255,255,255,0.2);
+  padding:30px;
+  border-radius:15px;
+  text-align:center;
+}
+
+input{
+  padding:10px;
+  margin:10px;
+  border-radius:10px;
+  border:none;
+}
+
+button{
+  padding:10px;
+  border-radius:10px;
+  background:red;
+  color:white;
+  cursor:pointer;
+}
+
+/* 🎥 VIDEO */
 #bgVideo{
   position:fixed;
   width:100%;
