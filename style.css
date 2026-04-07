@@ -1,89 +1,33 @@
-body{
-  margin:0;
-  font-family:sans-serif;
+/* LOGIN BACKGROUND */
+.login-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, black, purple);
 }
 
-/* 🔐 LOGIN PAGE */
-.login-bg{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100vh;
-  background:linear-gradient(45deg, black, purple);
+/* LOGIN BOX */
+.glass {
+  background: rgba(255,255,255,0.2);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
 }
 
-.glass{
-  background:rgba(255,255,255,0.2);
-  padding:30px;
-  border-radius:15px;
-  text-align:center;
+/* INPUT */
+input {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
 }
 
-input{
-  padding:10px;
-  margin:10px;
-  border-radius:10px;
-  border:none;
-}
-
-button{
-  padding:10px;
-  border-radius:10px;
-  background:red;
-  color:white;
-  cursor:pointer;
-}
-
-/* 🎥 VIDEO */
-#bgVideo{
-  position:fixed;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  z-index:-1;
-}
-
-/* CONTENT */
-.content{
-  text-align:center;
-  color:white;
-  margin-top:100px;
-}
-
-/* INTRO */
-#intro{
-  position:fixed;
-  width:100%;
-  height:100%;
-  background:black;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  color:white;
-  z-index:999;
-}
-
-/* 🎈 BALLOONS */
-.balloons span{
-  position:fixed;
-  bottom:-100px;
-  width:40px;
-  height:60px;
-  border-radius:50%;
-  animation:rise 10s infinite;
-}
-
-/* COLORS */
-.balloons span:nth-child(1){ left:10%; background:#ff4d4d; animation-duration:8s;}
-.balloons span:nth-child(2){ left:25%; background:#ffcc00; animation-duration:10s;}
-.balloons span:nth-child(3){ left:40%; background:#00ffcc; animation-duration:7s;}
-.balloons span:nth-child(4){ left:55%; background:#ff66ff; animation-duration:9s;}
-.balloons span:nth-child(5){ left:70%; background:#66ccff; animation-duration:11s;}
-.balloons span:nth-child(6){ left:85%; background:#ff9966; animation-duration:8s;}
-.balloons span:nth-child(7){ left:95%; background:#99ff99; animation-duration:12s;}
-
-/* ANIMATION */
-@keyframes rise{
-  0%{transform:translateY(0); opacity:1;}
-  100%{transform:translateY(-120vh); opacity:0;}
+/* BUTTON */
+button {
+  padding: 10px;
+  border-radius: 10px;
+  background: red;
+  color: white;
+  cursor: pointer;
 }
