@@ -1,10 +1,17 @@
+let started = false;
+
 function login() {
     let u = document.getElementById("user").value;
     let p = document.getElementById("pass").value;
 
     if(u === "himanshu" && p === "annu") {
         alert("Welcome ❤️");
-        startHearts();
+
+        if(!started){
+            startHearts();
+            started = true;
+        }
+
     } else {
         document.getElementById("error").innerText = "Wrong ❌";
     }
