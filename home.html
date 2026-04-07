@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Happy Birthday 🎉</title>
-<link rel="stylesheet" href="style.css">
+  <title>Happy Birthday 🎉</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- 🎈 BALLOONS -->
+<div class="balloons">
+  <span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span>
+</div>
+
+<!-- VIDEO -->
 <video autoplay muted loop id="bgVideo">
-<source src="bg.mp4">
+  <source src="bg.mp4">
 </video>
 
+<!-- INTRO -->
 <div id="intro">
-<h1>💖 For My Annu 💖</h1>
+  <h1>💖 For My Annu 💖</h1>
 </div>
 
 <div class="content">
@@ -23,28 +31,21 @@
 
 <button onclick="toggleMusic()">🎵 Music</button>
 
-<div class="slider">
-<img id="slide" src="photos/p1.jpg">
-</div>
-
-<div>
-<img src="photos/p1.jpg" width="60" onclick="showImg(this)">
-<img src="photos/p2.jpg" width="60" onclick="showImg(this)">
-<img src="photos/p3.jpg" width="60" onclick="showImg(this)">
-</div>
-
 <button onclick="fire()">🎆 Celebrate</button>
 
-<audio id="music">
-<source src="song.mp3">
+<audio id="music" loop>
+  <source src="song.mp3">
 </audio>
+
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0"></script>
 <script src="script.js"></script>
 
 <script>
 setTimeout(()=>{
-document.getElementById("intro").style.display="none";
+ document.getElementById("intro").style.display="none";
+ confetti();
 },3000);
 </script>
 
