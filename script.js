@@ -1,3 +1,4 @@
+alert("JS Connected");
 function login() {
     let u = document.getElementById("user").value.trim();
     let p = document.getElementById("pass").value.trim();
