@@ -1,94 +1,102 @@
 body {
-  margin: 0;
-  font-family: Arial;
-  overflow: hidden;
+    margin: 0;
+    font-family: Arial;
+    overflow: hidden;
 }
 
-/* MULTI COLOR BACKGROUND */
-.container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(270deg, #ff0080, #ff8c00, #40e0d0, #8a2be2);
-  background-size: 800% 800%;
-  animation: bgMove 10s infinite;
+/* 🌈 Animated Background */
+.bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, #ff0080, #ff8c00, #40e0d0, #ff0080);
+    background-size: 800% 800%;
+    animation: gradientMove 15s ease infinite;
+    z-index: -1;
 }
 
-@keyframes bgMove {
-  0% {background-position: 0%}
-  50% {background-position: 100%}
-  100% {background-position: 0%}
+@keyframes gradientMove {
+    0% {background-position: 0%}
+    50% {background-position: 100%}
+    100% {background-position: 0%}
 }
 
-/* GLASS CARD */
-.glass {
-  background: rgba(0,0,0,0.6);
-  padding: 30px;
-  border-radius: 20px;
-  text-align: center;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 0 30px #ffd700;
-  width: 280px;
+/* 💖 Login Box */
+.login-box {
+    width: 300px;
+    padding: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    background: rgba(0,0,0,0.6);
+    border-radius: 20px;
+    text-align: center;
+
+    box-shadow: 0 0 20px #ff0080, 0 0 40px #ff0080;
+    color: white;
 }
 
-/* TITLE */
-.glass h2 {
-  color: gold;
-  text-shadow: 0 0 10px red;
+/* Glow Title */
+.login-box h2 {
+    color: gold;
+    text-shadow: 0 0 10px gold, 0 0 20px orange;
 }
 
-/* INPUT */
-input {
-  width: 90%;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 25px;
-  border: none;
-  text-align: center;
-  outline: none;
+/* Subtitle */
+.subtitle {
+    color: #00ffcc;
+    margin-bottom: 15px;
 }
 
-/* BUTTON */
-button {
-  width: 100%;
-  padding: 10px;
-  border-radius: 25px;
-  border: none;
-  background: linear-gradient(45deg, red, gold);
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
+/* Inputs */
+.login-box input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
 }
 
-/* BUTTON HOVER */
-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 20px red;
+/* Button */
+.login-box button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #ff0080, orange);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+
+    box-shadow: 0 0 10px #ff0080, 0 0 20px orange;
 }
 
-/* ERROR */
-#msg {
-  color: yellow;
+.login-box button:hover {
+    transform: scale(1.1);
 }
 
-/* HACKER EFFECT TEXT */
-p {
-  color: #00ffcc;
+/* Error */
+#error {
+    color: red;
+    margin-top: 10px;
 }
 
-/* FLOATING HEARTS */
-body::before {
-  content: "💖 💕 💓 💗 💞";
-  position: absolute;
-  font-size: 25px;
-  animation: float 10s linear infinite;
-  width: 100%;
-  text-align: center;
+/* ❤️ Floating Hearts */
+.heart {
+    position: fixed;
+    bottom: -10px;
+    color: pink;
+    animation: floatUp 5s linear infinite;
 }
 
-@keyframes float {
-  0% {top: 100%;}
-  100% {top: -10%;}
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
 }
