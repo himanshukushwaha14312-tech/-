@@ -13,17 +13,24 @@
   <span></span><span></span><span></span><span></span>
 </div>
 
-<!-- VIDEO -->
+<!-- 🎥 BACKGROUND VIDEO -->
 <video autoplay muted loop id="bgVideo">
   <source src="bg.mp4">
 </video>
 
-<!-- INTRO -->
+<!-- 💖 INTRO -->
 <div id="intro">
   <h1>💖 For My Annu 💖</h1>
 </div>
 
-<div class="content">
+<!-- ✨ SHOW BUTTON -->
+<div id="startBox">
+  <h2>Almost there...</h2>
+  <button onclick="startSurprise()">✨ Show The Message</button>
+</div>
+
+<!-- 🎉 MAIN CONTENT -->
+<div class="content" id="mainContent">
 
 <h1>🎉 Happy Birthday ❤️</h1>
 
@@ -44,8 +51,14 @@
 <script>
 setTimeout(()=>{
  document.getElementById("intro").style.display="none";
- confetti();
+ document.getElementById("startBox").style.display="block";
 },3000);
+
+function startSurprise(){
+ document.getElementById("startBox").style.display="none";
+ document.getElementById("mainContent").style.display="block";
+ confetti();
+}
 </script>
 
 </body>
