@@ -1,18 +1,29 @@
-function login(){
- let u = document.getElementById("user").value.trim().toLowerCase();
- let p = document.getElementById("pass").value.trim();
+// 🎯 Typing Effect
+let text = "You are very special for me 💖";
+let i = 0;
 
- if(u === "himanshu" && p === "annu"){
-  sessionStorage.setItem("auth","true");
-  window.location.href = "home.html";
+function typing(){
+ if(i < text.length){
+  document.getElementById("typing").innerHTML += text.charAt(i);
+  i++;
+  setTimeout(typing,50);
+ }
+}
+
+// 🎵 Music
+function toggleMusic(){
+ let m = document.getElementById("music");
+ if(m.paused){
+  m.play();
  }else{
-  document.getElementById("msg").innerText = "❌ Wrong Username or Password";
+  m.pause();
  }
 }
 
-// PROTECT HOME PAGE
-if(location.pathname.includes("home.html")){
- if(sessionStorage.getItem("auth") !== "true"){
-  location.href = "index.html";
- }
+// 🎆 Confetti Button
+function fire(){
+ confetti();
 }
+
+// Start typing after open
+setTimeout(typing,5000);
