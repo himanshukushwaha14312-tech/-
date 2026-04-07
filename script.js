@@ -1,18 +1,30 @@
-function login(){
- let u = document.getElementById("user").value.trim().toLowerCase();
- let p = document.getElementById("pass").value.trim();
+function login() {
+    let u = document.getElementById("user").value;
+    let p = document.getElementById("pass").value;
 
- if(u === "himanshu" && p === "annu"){
-  sessionStorage.setItem("auth","true");
-  window.location.href = "home.html";
- }else{
-  document.getElementById("msg").innerText = "❌ Wrong Username or Password";
- }
+    if(u === "love" && p === "1234") {
+        alert("Welcome ❤️");
+        startHearts();
+    } else {
+        document.getElementById("error").innerText = "Wrong ❌";
+    }
 }
 
-// PROTECT HOME PAGE
-if(location.pathname.includes("home.html")){
- if(sessionStorage.getItem("auth") !== "true"){
-  location.href = "index.html";
- }
+/* ❤️ Hearts Animation */
+function startHearts() {
+    setInterval(() => {
+        let heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerText = "❤️";
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = Math.random() * 20 + 20 + "px";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 5000);
+
+    }, 300);
 }
