@@ -4,18 +4,87 @@ body {
     font-family: Arial;
 }
 
-/* ================= LOGIN PAGE SAFE ================= */
-body:not(.home) {
-    overflow: auto;
-}
-
-/* ================= HOME PAGE ================= */
-.home {
+/* ================= LOGIN PAGE ================= */
+body.login {
     overflow: hidden;
 }
 
-/* 🎥 VIDEO */
-.home #bgVideo {
+/* Animated Background */
+body.login .bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, #ff0080, #ff8c00, #40e0d0, #ff0080);
+    background-size: 800% 800%;
+    animation: gradientMove 15s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientMove {
+    0% {background-position: 0%}
+    50% {background-position: 100%}
+    100% {background-position: 0%}
+}
+
+/* Login Box */
+body.login .login-box {
+    width: 300px;
+    padding: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    background: rgba(0,0,0,0.6);
+    border-radius: 20px;
+    text-align: center;
+
+    box-shadow: 0 0 20px #ff0080, 0 0 40px #ff0080;
+    color: white;
+}
+
+/* Title */
+body.login .login-box h2 {
+    color: gold;
+    text-shadow: 0 0 10px gold, 0 0 20px orange;
+}
+
+/* Subtitle */
+body.login .subtitle {
+    color: #00ffcc;
+}
+
+/* Inputs */
+body.login .login-box input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Button */
+body.login .login-box button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #ff0080, orange);
+    color: white;
+    cursor: pointer;
+}
+
+/* Error */
+#msg {
+    color: red;
+}
+
+/* ================= HOME PAGE ================= */
+body.home {
+    overflow: hidden;
+}
+
+/* Video */
+body.home #bgVideo {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -23,8 +92,8 @@ body:not(.home) {
     z-index: -2;
 }
 
-/* 🎈 BALLOONS */
-.home .balloons span {
+/* Balloons */
+body.home .balloons span {
     position: absolute;
     bottom: -150px;
     width: 40px;
@@ -33,30 +102,29 @@ body:not(.home) {
     animation: rise 10s linear infinite;
 }
 
-.home .balloons span:nth-child(1){ left:10%; background:red; animation-delay:0s;}
-.home .balloons span:nth-child(2){ left:20%; background:blue; animation-delay:2s;}
-.home .balloons span:nth-child(3){ left:30%; background:yellow; animation-delay:4s;}
-.home .balloons span:nth-child(4){ left:50%; background:pink; animation-delay:1s;}
-.home .balloons span:nth-child(5){ left:70%; background:orange; animation-delay:3s;}
-.home .balloons span:nth-child(6){ left:85%; background:purple; animation-delay:5s;}
+body.home .balloons span:nth-child(1){ left:10%; background:red; animation-delay:0s;}
+body.home .balloons span:nth-child(2){ left:20%; background:blue; animation-delay:2s;}
+body.home .balloons span:nth-child(3){ left:30%; background:yellow; animation-delay:4s;}
+body.home .balloons span:nth-child(4){ left:50%; background:pink; animation-delay:1s;}
+body.home .balloons span:nth-child(5){ left:70%; background:orange; animation-delay:3s;}
+body.home .balloons span:nth-child(6){ left:85%; background:purple; animation-delay:5s;}
 
 @keyframes rise {
     0% {transform: translateY(0); opacity:1;}
     100% {transform: translateY(-120vh); opacity:0;}
 }
 
-/* 💖 INTRO */
-.home #intro {
+/* Intro */
+body.home #intro {
     position: absolute;
     top: 40%;
     width: 100%;
     text-align: center;
     color: white;
-    font-size: 30px;
 }
 
-/* ✨ START BOX */
-.home #startBox {
+/* Start */
+body.home #startBox {
     display: none;
     position: absolute;
     top: 50%;
@@ -66,52 +134,13 @@ body:not(.home) {
     color: white;
 }
 
-.home #startBox button {
-    padding: 12px 25px;
-    border: none;
-    border-radius: 25px;
-    background: linear-gradient(45deg,#ff0080,#ff8c00);
-    color: white;
-    cursor: pointer;
-}
-
-/* 🎉 CONTENT */
-.home .content {
+/* Content */
+body.home .content {
     display: none;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
-    color: white;
-}
-
-/* ================= LOGIN DESIGN (UNCHANGED) ================= */
-
-.login-box {
-    width: 300px;
-    padding: 25px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background: rgba(0,0,0,0.6);
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 0 20px #ff0080, 0 0 40px #ff0080;
-    color: white;
-}
-
-.login-box input {
-    width: 90%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 10px;
-}
-
-.login-box button {
-    padding: 10px 20px;
-    border-radius: 20px;
-    background: linear-gradient(45deg,#ff0080,orange);
     color: white;
 }
