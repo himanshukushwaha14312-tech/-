@@ -5,10 +5,7 @@ function login() {
     let p = document.getElementById("pass").value;
 
     if(u === "himanshu" && p === "annu") {
-        alert("Welcome ❤️");
-
-        if(!started){
-            startHearts();
+        window.location.href = "home.html";
             started = true;
         }
 
