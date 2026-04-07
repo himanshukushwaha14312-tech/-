@@ -2,7 +2,7 @@ function login() {
     let u = document.getElementById("user").value;
     let p = document.getElementById("pass").value;
 
-    if(u === "love" && p === "1234") {
+    if(u === "himanshu" && p === "annu") {
         alert("Welcome ❤️");
         startHearts();
     } else {
