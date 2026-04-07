@@ -10,7 +10,7 @@ function login(){
  }
 }
 
-// PROTECT PAGE
+// PROTECT
 if(location.pathname.includes("home.html")){
  if(sessionStorage.getItem("auth")!="true"){
   location.href="index.html";
