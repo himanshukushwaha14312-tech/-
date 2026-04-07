@@ -1,43 +1,43 @@
 function login(){
-let u=document.getElementById("user").value;
-let p=document.getElementById("pass").value;
+ let u=document.getElementById("user").value;
+ let p=document.getElementById("pass").value;
 
-if(u=="himanshu" && p=="annu"){
-sessionStorage.setItem("auth","true");
-window.location="home.html";
-}else{
-document.getElementById("msg").innerText="Wrong ❌";
-}
+ if(u=="himanshu" && p=="annu"){
+  sessionStorage.setItem("auth","true");
+  window.location="home.html";
+ }else{
+  document.getElementById("msg").innerText="Wrong ❌";
+ }
 }
 
+// PROTECT PAGE
 if(location.pathname.includes("home.html")){
-if(sessionStorage.getItem("auth")!="true"){
-location.href="index.html";
-}
+ if(sessionStorage.getItem("auth")!="true"){
+  location.href="index.html";
+ }
 }
 
+// MUSIC
 function toggleMusic(){
-let m=document.getElementById("music");
-m.paused?m.play():m.pause();
+ let m=document.getElementById("music");
+ m.paused?m.play():m.pause();
 }
 
-function showImg(el){
-document.getElementById("slide").src=el.src;
-}
-
+// CONFETTI
 function fire(){
-confetti({particleCount:200,spread:120});
+ confetti({particleCount:200,spread:120});
 }
 
+// TYPING
 let text="Tum meri sabse special ho ❤️";
 let i=0;
 
 function typing(){
-if(i<text.length){
-document.getElementById("typing").innerHTML+=text[i];
-i++;
-setTimeout(typing,50);
-}
+ if(i<text.length){
+  document.getElementById("typing").innerHTML+=text[i];
+  i++;
+  setTimeout(typing,50);
+ }
 }
 
 window.onload=typing;
