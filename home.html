@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Birthday 🎉</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<video autoplay muted loop id="bgVideo">
+<source src="bg.mp4">
+</video>
+
+<div id="intro">
+<h1>💖 For My Annu 💖</h1>
+</div>
+
+<div class="content">
+
+<h1>🎉 Happy Birthday ❤️</h1>
+
+<p id="typing"></p>
+
+<button onclick="toggleMusic()">🎵 Music</button>
+
+<div class="slider">
+<img id="slide" src="photos/p1.jpg">
+</div>
+
+<div>
+<img src="photos/p1.jpg" width="60" onclick="showImg(this)">
+<img src="photos/p2.jpg" width="60" onclick="showImg(this)">
+<img src="photos/p3.jpg" width="60" onclick="showImg(this)">
+</div>
+
+<button onclick="fire()">🎆 Celebrate</button>
+
+<audio id="music">
+<source src="song.mp3">
+</audio>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0"></script>
+<script src="script.js"></script>
+
+<script>
+setTimeout(()=>{
+document.getElementById("intro").style.display="none";
+},3000);
+</script>
+
+</body>
+</html>
